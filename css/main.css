@@ -1,5 +1,23 @@
 /* start of header */
 
+/* mobile nav icons */
+
+.btn-mobil-nav{
+  cursor: pointer;
+  background: none;
+  display: none;
+}
+
+.icon-mobile-nav {
+  font-size: 4.8rem;
+  color: #333;
+}
+
+.close-icon {
+  display: none;
+}
+
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -7,6 +25,7 @@
   background-color: #fdf2e9;
   height: 9.6rem;
   padding: 0 4.8px;
+  position: relative;
 }
 
 .logo {
@@ -20,7 +39,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 4.8rem;
 }
 
 .main-nav-link:link,
@@ -335,6 +354,7 @@ font-size: 1.8rem;
 line-height: 1.6;
 margin-bottom: 1.8rem;
 }
+
 .testimonial-name {
 font-size: 1.6rem;
 color: #6f6f6f;
