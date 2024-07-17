@@ -3,7 +3,11 @@
 
   <head>
     <meta charset="UTF-8" />
+    <meta name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- for smootn in safari -->
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <!-- rubek font from google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +22,13 @@
     <link rel="stylesheet" href="css/main.css" />
     <!-- media query css file -->
     <link rel="stylesheet" href="css/queries.css" />
-    <title>Omnifood</title>
+    <!-- fav desktop icon -->
+    <link rel="icon" href="/img/fav icons/favicon.png" />
+    <!-- fav apple icon -->
+    <link rel="apple-touch-icon" href="/img/fav icons/apple-touch-icon.png" />
+    <!-- fav android icon -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <title>Omnifood &mdash; Never cook again!</title>
   </head>
 
   <body>
@@ -28,11 +38,11 @@
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="#" class="main-nav-link">How it works</a></li>
-          <li><a href="#" class="main-nav-link">Meals</a></li>
-          <li><a href="#" class="main-nav-link">Testimonials</a></li>
-          <li><a href="#" class="main-nav-link">Pricing</a></li>
-          <li><a href="#" class="main-nav-link nav-cta">Try for free</a></li>
+          <li><a href="#how" class="main-nav-link">How it works</a></li>
+          <li><a href="#meals" class="main-nav-link">Meals</a></li>
+          <li><a href="#testimonials" class="main-nav-link">Testimonials</a></li>
+          <li><a href="#pricing" class="main-nav-link">Pricing</a></li>
+          <li><a href="#cta" class="main-nav-link nav-cta">Try for free</a></li>
         </ul>
       </nav>
       <!-- for mobile navigation and will uptade it soon -->
@@ -55,8 +65,8 @@
               eat healthy again. Tailored to your personal tastes and
               nutritional needs.
             </p>
-            <a href="#" class="btn btn--full margin-right-sm">Start eating well</a>
-            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <a href="#cta" class="btn btn--full margin-right-sm">Start eating well</a>
+            <a href="#how" class="btn btn--outline">Learn more &darr;</a>
             <div class="deliverd-meals">
               <div class="delivered-imgs">
                 <img src="img/customers/customer-1.jpg" alt="customer photo" title="maria" />
@@ -71,10 +81,13 @@
               </p>
             </div>
           </div>
-          <div class="hero-text-box">
+
+          <picture>
+            <source srcset="./img/hero.webp" type="image/webp" />
+            <source srcset="./img/hero-min.png" type="image/png" />
             <img src="img/hero.png" alt="woman enjoying food, meals in storage container, and food bowls on a table"
-              class="hero-img" title="" />
-          </div>
+            class="hero-img" title="main site photo" />
+          </picture>
         </div>
       </section>
       <!---==============================================================================================================-->
@@ -92,8 +105,8 @@
         </div>
       </section>
       <!---==============================================================================================================-->
-      <!-- hero section -->
-      <section class="section-how">
+      <!-- how it works section -->
+      <section id="how" class="section-how">
         <div class="container">
           <span class="subheading">How it works</span>
           <h2 class="heading-secondary">
@@ -123,7 +136,6 @@
             <img src="img/app/app-screen-2.png" class="step-image" title="app meals screen"
               alt="Iphone app meals performances plans screen" />
           </div>
-
           <div class="step-text-box">
             <p class="step-number">02</p>
             <h3 class="heading-tertiary">Approve your weekly meal plan</h3>
@@ -133,7 +145,6 @@
               your own recipes.
             </p>
           </div>
-
           <!-- Step # 03 -->
           <div class="step-text-box">
             <p class="step-number">03</p>
@@ -144,7 +155,6 @@
               change delivery schedule and address daily!
             </p>
           </div>
-
           <div class="step-img-box">
             <img src="img/app/app-screen-3.png" class="step-image" title="app delevary screen"
               alt="Iphone app delevary sereen" />
@@ -153,7 +163,7 @@
       </section>
       <!---==============================================================================================================-->
       <!-- meals section -->
-      <section class="section-meals">
+      <section id="meals" class="section-meals">
         <div class="container center-text">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">
@@ -168,7 +178,6 @@
                 <span class="tag tag--vegetarian">Vegetarian</span>
               </div>
               <p class="meal-title">Japanese Gyozas</p>
-
               <ul class="meal-attributes">
                 <li class="meal-attribute">
                   <i class="bi bi-fire meal-icon"></i>
@@ -193,7 +202,6 @@
                 <span class="tag tag--paleo">Paleo</span>
               </div>
               <p class="meal-title">Avocado Salad</p>
-
               <ul class="meal-attributes">
                 <li class="meal-attribute">
                   <i class="bi bi-fire meal-icon"></i>
@@ -210,7 +218,6 @@
               </ul>
             </div>
           </div>
-
           <div class="diets">
             <h3 class="heading-tertiary">Works with any diet:</h3>
             <ul class="list">
@@ -248,10 +255,9 @@
           <a href="#" class="link">See all recipes <i class="bi bi-arrow-right"></i></a>
         </div>
       </section>
-
       <!---==============================================================================================================-->
       <!-- testimonials section -->
-      <section class="section-testimonials">
+      <section id="testimonials" class="section-testimonials">
         <div class="testimonials-container">
           <span class="subheading">Testimonial</span>
           <h2 class="heading-secondary">Once you try it, you can't go back</h2>
@@ -277,7 +283,6 @@
               <p class="testimonial-name">&mdash; Ben Hadley</p>
             </figure>
             <!-- third ond -->
-
             <figure class="testimonial">
               <img class="testimonial-img" src="img/customers/steve.jpg" alt="photo of customer Steve Miller"
                 title="Steve Miller" />
@@ -288,7 +293,6 @@
               <p class="testimonial-name">&mdash; Steve Miller</p>
             </figure>
             <!-- fourth one -->
-
             <figure class="testimonial">
               <img class="testimonial-img" src="img/customers/hannah.jpg" alt="photo of customer Hannah Smith"
                 title="Hannah Smith" />
@@ -341,7 +345,7 @@
       </section>
       <!---==============================================================================================================-->
       <!-- pricing section -->
-      <section class="section-pricing">
+      <section id="pricing" class="section-pricing">
         <div class="contianer">
           <span class="subheading">Pricing</span>
           <h2 class="heading-secondary">
@@ -406,14 +410,12 @@
             </div>
           </div>
         </div>
-
         <div class="container center-text grid">
           <aside class="plan-details">
             Prices include all applicable taxes. You can cancel at any time.
             both plan include the following
           </aside>
         </div>
-
         <div class="container grid grid--4-col">
           <div class="feature">
             <i class="bi bi-infinity feature-icon"></i>
@@ -450,7 +452,7 @@
         </div>
       </section>
       <!-- start section cta -->
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -494,44 +496,29 @@
           <a href="#" class="footer-logo">
             <img src="img/omnifood-logo.png" alt="omnifood-logo" title="Omnifood" class="logo" />
           </a>
-
           <ul class="social-links">
             <li><a class="footer-link" href="#"><i class="bi bi-instagram social-icon"></i></a></li>
             <li><a class="footer-link" href="#"><i class="bi bi-facebook social-icon"></i></a></li>
             <li><a class="footer-link" href="#"><i class="bi bi-twitter-x social-icon"></i></a></li>
           </ul>
-
-          <p class="copyright"> copyright <i class="bi bi-c-circle"></i>2027 by omnifood, Inc. All rights reserved.</p>
+          <p class="copyright"> copyright <i class="bi bi-c-circle"></i> <span class="year"> 2027 </span>by omnifood,
+            Inc. All rights reserved.</p>
         </div>
         <div class="address-col">
           <p class="footer-heading">Contact us</p>
-
-
-
-
-
           <address class="contactus">
-
-
             <p class="address">Address: 623 Harrison St., 2nd Floor, San Francisco, CA 94107</p>
             <p>
               <a class="footer-link" href="tel:415-201-6370">415-201-6370 </a>
               <br>
               <a class="footer-link" href="mailto:hello@omnifood.com">hello@omnifood.com </a>
             </p>
-
           </address>
-
-
-
-
         </div>
         <nav class="nav-col">
-
           <p class="footer-heading">
             Account
           </p>
-
           <ul class="footer-nav">
             <li><a class="footer-link" href="#">Create account</a></li>
             <li><a class="footer-link" href="#">Sign in</a></li>
@@ -539,9 +526,7 @@
             <li><a class="footer-link" href="#">Android app</a></li>
           </ul>
         </nav>
-
         <nav class="nav-col">
-
           <p class="footer-heading">
             company
           </p>
@@ -552,13 +537,10 @@
             <li><a class="footer-link" href="#">Careers</a></li>
           </ul>
         </nav>
-
         <nav class="nav-col">
-
           <p class="footer-heading">
             Resources
           </p>
-
           <ul class="footer-nav">
             <li><a class="footer-link" href="#">Recipe directory</a></li>
             <li><a class="footer-link" href="#">Help center</a></li>
@@ -567,6 +549,7 @@
         </nav>
         </div>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 
 </html>
